@@ -1,6 +1,6 @@
 # Speedlaces
 
-TODO: Write a gem description
+Dynamic named-argument object initialization.
 
 ## Installation
 
@@ -18,7 +18,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    class MyClass
+      include Speedlaces
+      attr_accessor :foo, :baz
+    end
+
+    my_object = MyClass.new({ foo: 'bar', baz: false })
+    my_object.foo #=> 'bar'
+    my_object.baz #=> false
 
 ## Contributing
 
